@@ -1,0 +1,127 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~__~~~__~~___~~~__~~__~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ \~/ /~|_ _|~|  \/  |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ V /~~~| |~~| |\/| |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~___~~~|___|~| |~~| |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~___~~~~___~~~__~~__~~_____~~~___~~~~___~~~~_~~~~~~___~~~~~~~~~~~~~
+~~~~~~~~~~~~~/ __|~~/ _ \~~| \| |~|_   _|~| _ \~~/ _ \~~| |~~~~/ __|~~~~~~~~~~~~
+~~~~~~~~~~~~| (__~~| (_) |~| .` |~~~| |~~~|   /~| (_) |~| |__~~\__ \~~~~~~~~~~~~
+~~~~~~~~~~~~~\___|~~\___/~~|_|\_|~~~|_|~~~|_|_\~~\___/~~|____|~|___/~~~~~~~~~~~~
+                                                         
+--------------------------------------------------------------------------------
+-------------------------------------MOVING-------------------------------------
+--------------------------------------------------------------------------------
+j     | Move down (by screen line, gj in original)
+k     | Move up (by screen line, gk in original)
+h     | Move left
+l     | Move right
+
+w     | Go to beginning of next word
+W     | Go to beginning of next WORD
+e     | Go to end of next word
+E     | Go to end of next WORD
+b     | Go to beginning of prev word
+B     | Go to beginning of prev WORD
+
+0     | Go to beginning of line
+$     | Go to end of line
+
+f<x>  | Go to next occurence of <x> character in line
+F<x>  | Go to prev occurence of <x> char in line
+t<x>  | Go to next occurence of <x> char in line (put cursor before char)
+T<x>  | Go to prev occurence of <x> char in line (put cursor after char)
+;     | Repeat previous f/F/t/T command
+
+/<w>  | Search for <w> word downwards
+?<w>  | Search for <w> word upwards
+
+gg    | Move cursor to beginning of file
+G     | Move cursor to end of file
+<n>G  | Move cursor to <n>th line
+
+<C-u> | Move up by half-page
+<C-d> | Move down by half-page
+H     | Move to first line of screen
+M     | Move to middle line of screen
+L     | Move to last line of screen
+
+m<x>  | Add a mark with name <x> on cursor position
+'<x>  | Go to mark with name <x> (start column)
+`<x>  | Go to mark with name <x> (specific column)
+
+--------------------------------------------------------------------------------
+-------------------------------------EDITING------------------------------------
+--------------------------------------------------------------------------------
+x    | Delete char (works like DEL button in keyboard)
+X    | Delete char (works like Backspace in keyboard)
+d<m> | Delete from cursor position until cursor position after motion <m>
+dd   | Delete line
+D    | Delete from cursor position until end of line
+c<m> | Same as d<m>, but go to insert mode afterwards
+C    | Same as D, but go to insert mode afterwards
+s    | Delete char(s) and go to insert mode afterwards
+S    | Delete line(s) and go to insert mode afterwards
+
+i    | Go to insert mode, cursor goes to LEFT of original position
+I    | Go to insert mode, cursor goes to START of line (ignoring whitespace)
+a    | Go to insert mode, cursor goes to RIGHT of original position
+A    | Go to insert mode, cursor goes to END of line (ignoring whitespace)
+o    | Go to insert mode BELOW cursor's line
+O    | Go to insert mode ABOVE cursor's line
+
+r<x> | Replace char on cursor with <x> char
+R    | Go to replace mode
+
+v    | Go to visual mode
+V    | Go to linewise-visual mode
+Esc  | Go to normal mode
+:    | Go to command line mode
+
+y<m> | Yank from cursor position until cursor position after motion <m>
+Y    | Yank whole line (same as yy)
+p    | Paste AFTER cursor (or AFTER line, if line/s were yanked)
+P    | Paste BEFORE cursor (or BEFORE line, if line/s were yanked)
+
+.    | Repeat editing command
+
+>>   | Indent line
+<<   | Dedent line
+
+--------------------------------------------------------------------------------
+-------------------------------WORKING WITH FILES-------------------------------
+--------------------------------------------------------------------------------
+:e. | Open netrw (file explorer) at current directory
+:E  | Open netrw (file explorer) at current file's directory
+:w  | Save file
+:q  | Quit window
+:qa | Quit EVERYTHING
+ZZ  | Quit saving changes
+ZQ  | Quit without saving changes
+
+--------------------------------------------------------------------------------
+--------------------------WORKING WITH FILES (BUFFERS)--------------------------
+--------------------------------------------------------------------------------
+:ls     | Show buffers
+:ls!    | Show buffers (including unlisted ones)
+<Tab>   | Go to next tab (:bnext in original)
+<S-Tab> | Go to prev tab (:bprev in orginal)
+:e!     | Reload buffer
+,bd     | Close buffer without closing window (vim-bufkill)
+
+--------------------------------------------------------------------------------
+--------------------------WORKING WITH FILES (WINDOWS)--------------------------
+--------------------------------------------------------------------------------
+:sp   | Split window horizontally
+:vs   | Split window vertically
+<C-h> | Switch to left window (<C-w>h in original)
+<C-l> | Switch to right window (<C-w>l in original)
+<C-j> | Switch to lower window (<C-w>j in original)
+<C-k> | Switch to upper window (<C-w>k in original)
+:q    | Quit window (does not close buffer)
+:bd   | Close buffer and close window
+
+--------------------------------------------------------------------------------
+-------------------------WORKING WITH FILES (NERDTREE)--------------------------
+--------------------------------------------------------------------------------
+,<Space> | Go to tree (custom command)
+r        | Refresh node
+m        | Show options (add, move, delete, copy)
